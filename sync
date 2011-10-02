@@ -2,29 +2,35 @@
 
 cd $HOME
 
-for x in `ls -1 $HOME/.managed/dotdir`; do
-    if [ -e "$HOME/$x" -a -n `grep $x $HOME/.managed/dotdirs/.trample` ]; then
-        rm -f "$HOME/.$x"
-    fi
-    if [ ! -e "$HOME/.$x" ]; then
-        ln -s "$HOME/.managed/dotdir/$x" "$HOME/.$x"
-    fi
-done
+if [ -d "$HOME/.managed/dotdir" ]; then
+    for x in `ls -1 $HOME/.managed/dotdir`; do
+        if [ -e "$HOME/$x" -a -n `grep ^$x\$ $HOME/.managed/dotdirs/.trample` ]; then
+            rm -f "$HOME/.$x"
+        fi
+        if [ ! -e "$HOME/.$x" ]; then
+            ln -s "$HOME/.managed/dotdir/$x" "$HOME/.$x"
+        fi
+    done
+fi
 
-for x in `ls -1 $HOME/.managed/dotfiles`; do
-    if [ -e "$HOME/$x" -a -n `grep $x $HOME/.managed/dotfiles/.trample` ]; then
-        rm -f "$HOME/.$x"
-    fi
-    if [ ! -e "$HOME/$x" ]; then
-        ln -s "$HOME/.managed/dotfiles/$x" "$HOME/.$x"
-    fi
-done
+if [ -d "$HOME/.managed/dotfiles" ]; then
+    for x in `ls -1 $HOME/.managed/dotfiles`; do
+        if [ -e "$HOME/$x" -a -n `grep ^$x\$ $HOME/.managed/dotfiles/.trample` ]; then
+            rm -f "$HOME/.$x"
+        fi
+        if [ ! -e "$HOME/$x" ]; then
+            ln -s "$HOME/.managed/dotfiles/$x" "$HOME/.$x"
+        fi
+    done
+fi
 
-for x in `ls -1 $HOME/.managed/nolink`; do
-    if [ -e "$HOME/.$x" -a -n `grep $x $HOME/.managed/nolink/.trample` ]; then
-        rm -rf "$HOME/.$x"
-    fi
-    if [ ! -e "$HOME/$.x" ]; then
-        ln "$HOME/.managed/nolinke/$x" "$HOME/.$x"
-    fi
-done
+if [ -d "$HOME/.managed/nolink" ]; then
+    for x in `ls -1 $HOME/.managed/nolink`; do
+        if [ -e "$HOME/.$x" -a -n `grep ^$x\$ $HOME/.managed/nolink/.trample` ]; then
+            rm -rf "$HOME/.$x"
+        fi
+        if [ ! -e "$HOME/$.x" ]; then
+            ln "$HOME/.managed/nolink/$x" "$HOME/.$x"
+        fi
+    done
+fi
