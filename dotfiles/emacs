@@ -1,0 +1,41 @@
+(setq emacs-extension-dir (expand-file-name "~/.emacs.d"))
+
+(defun list-contains-string (list str)
+  "Returns t if str is in list."
+  (if (eq list nil)
+      nil
+    (if (string= (car list) str)
+        't
+      (list-contains-string (cdr list) str))))
+
+(defun maybe-add-dir-to-load-path (dir blacklist)
+  "If dir is a directory, add it to the load path and recurse; else stop."
+  (let ((expanded-dir (expand-file-name dir)))
+    (if (and (file-accessible-directory-p expanded-dir)
+             (not (list-contains-string blacklist (file-name-nondirectory expanded-dir))))
+        (progn
+          (dolist (child (directory-files expanded-dir))
+            (if (not (or (string= "." child) (string= ".." child)))
+                (maybe-add-dir-to-load-path (concat expanded-dir "/" child) blacklist)))
+          (progn (add-to-list 'load-path dir))))))
+
+(maybe-add-dir-to-load-path emacs-extension-dir
+                            '(".git"))
+
+
+(require 'areusch-c-switch-decl-impl)
+(require 'areusch-c-gen)
+(require 'areusch-projects)
+
+(require 'html-toc)
+
+(require 'areusch-disable-exit)
+(require 'google-maps)
+
+(load-library "magit")
+
+; Whitespace removal
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(server-start)
+(put 'dired-find-alternate-file 'disabled nil)
