@@ -7,6 +7,7 @@ sync methods. Run the sync script after a git pull to install
 appropriate symlinks and hardlinks.
 
 Three types of linkages can be created:
+
 *   symlinked dot-directories: the symlink <code>$HOME/.x</code> -> <code>$HOME/.managed/dotdirs/x</code>, where <code>x</code> is a dir
 *   symlinked dot-files: the symlink <code>$HOME/.x</code> -> <code>$HOME/.managed/dotfiles/x</code>
 *   hardlinked dot-files: the hardlink <code>$HOME/.x</code> -> <code>$HOME/.managed/nolink/x</code>
