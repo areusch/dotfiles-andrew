@@ -1,7 +1,7 @@
 (setq emacs-extension-dir (expand-file-name "~/.emacs.d"))
 
 ;;; 1) Start by loading ELPA, so we can reference it from everywhere.
-(let* ((elpa-root "~/.emacs.d/third-party/elpa")
+(let* ((elpa-root (concat emacs-extension-dir "/third-party/elpa"))
        (elpa-main-lisp-file (concat elpa-root "/package.el")))
   (if (file-exists-p elpa-main-lisp-file)
       (when
