@@ -1,41 +1,41 @@
 (setq emacs-extension-dir (expand-file-name "~/.emacs.d"))
 
-(defun list-contains-string (list str)
-  "Returns t if str is in list."
-  (if (eq list nil)
-      nil
-    (if (string= (car list) str)
-        't
-      (list-contains-string (cdr list) str))))
+;;; 1) Start by loading ELPA, so we can reference it from everywhere.
+(let* ((elpa-root "~/.emacs.d/third-party/elpa")
+       (elpa-main-lisp-file (concat elpa-root "/package.el")))
+  (if (file-exists-p elpa-main-lisp-file)
+      (when
+	  (load
+	   (expand-file-name elpa-main-lisp-file))
+	(package-initialize))))
 
-(defun maybe-add-dir-to-load-path (dir blacklist)
+;; 2) Load traverse-accessible-dirs for load-path setup.
+;; Specially loaded so we can traverse the lazy-load tree.
+(load-file (concat emacs-extension-dir "/lazy-loaded/traverse-accessible-dirs.el"))
+
+;; 3) Setup load path
+(defun maybe-add-dir-to-load-path (dir &optional blacklist)
   "If dir is a directory, add it to the load path and recurse; else stop."
-  (let ((expanded-dir (expand-file-name dir)))
-    (if (and (file-accessible-directory-p expanded-dir)
-             (not (list-contains-string blacklist (file-name-nondirectory expanded-dir))))
-        (progn
-          (dolist (child (directory-files expanded-dir))
-            (if (not (or (string= "." child) (string= ".." child)))
-                (maybe-add-dir-to-load-path (concat expanded-dir "/" child) blacklist)))
-          (progn (add-to-list 'load-path dir))))))
+  (traverse-accessible-dirs
+   dir
+   (lambda (child)
+     (if (file-accessible-directory-p child)
+	 (progn
+	   (add-to-list 'load-path child))))
+   blacklist))
 
-(maybe-add-dir-to-load-path emacs-extension-dir
-                            '(".git"))
+(maybe-add-dir-to-load-path (concat emacs-extension-dir "/lazy-loaded"))
+
+;; 4) Autoloads.
+(load-file (concat emacs-extension-dir "/startup-eval/autoloads.el"))
+
+;; 5) Startup scripts.
+(traverse-accessible-dirs
+ (concat emacs-extension-dir "/startup-eval")
+ (lambda (f)
+   (if (and (string= (file-name-extension f) "el")
+	    (or (file-regular-p f) (file-symlink-p f)))
+       (progn
+         (load-file f)))))
 
 
-(require 'areusch-c-switch-decl-impl)
-(require 'areusch-c-gen)
-(require 'areusch-projects)
-
-(require 'html-toc)
-
-(require 'areusch-disable-exit)
-(require 'google-maps)
-
-(load-library "magit")
-
-; Whitespace removal
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
-
-(server-start)
-(put 'dired-find-alternate-file 'disabled nil)
