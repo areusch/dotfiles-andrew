@@ -9,9 +9,9 @@
     ;; 	  (write-file generated-autoload-file)))
     (traverse-accessible-dirs
      "~/.emacs.d/lazy-loaded"
-     (lambda (f) 
+     (lambda (f)
        (if (not (file-accessible-directory-p f))
 	   nil
 	 (message "Updating autoloads for directory %s" f)
-	 (update-directory-autoloads f))))
+         (condition-case nil (update-directory-autoloads f) ('error t)))))
     (load-file generated-autoload-file)))
