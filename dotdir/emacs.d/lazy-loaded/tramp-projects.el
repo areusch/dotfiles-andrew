@@ -1,3 +1,39 @@
+;;; tramp-projects.el --- Directory re-mapping for tramp.
+
+;;; Copyright (C) 2011 Andrew Reusch <areusch@gmail.com>
+
+;;; This program is free software: you can redistribute it and/or modify
+;;; it under the terms of the GNU General Public License as published by
+;;; the Free Software Foundation, either version 3 of the License, or
+;;; (at your option) any later version.
+
+;;; This program is distributed in the hope that it will be useful,
+;;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;; GNU General Public License for more details.
+
+;;; You should have received a copy of the GNU General Public License
+;;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+;;; Commentary:
+
+;;; I typically have many projects open in Emacs at once. While keyboard
+;;; shortcuts typically make it easy to switch buffers within the same project,
+;;; my projects often have large directory hierarchies or are stored under large
+;;; directory hierarchies, making it difficult to quickly switch to a buffer in
+;;; another project.
+
+;;; Tramp Projects makes it easy to address files by project name rather than
+;;; path. Typically this is much faster, for me, than deleting off the precise
+;;; number of subdirectories from the current path in C-x C-f.
+
+;;; Right now this is lightly bound (in tramp-project-scan-root) to my own
+;;; project identification and configuration systems. It's not really intended
+;;; to be widely distributed, but if you want to use it, send me mail and I'll
+;;; see about packaging it in an easier-to-consume fashion.
+
+;;; Code:
+
 (require 'tramp)
 
 (defgroup tramp-projects nil
