@@ -2,6 +2,7 @@
 
 ;; Originally from stevey, adapted to support moving to a new directory.
 ;; http://stackoverflow.com/questions/384284/can-i-rename-an-open-file-in-emacs
+;;;###autoload
 (defun rename-file-and-buffer (new-name)
   "Renames both current buffer and file it's visiting to NEW-NAME."
   (interactive
@@ -30,4 +31,3 @@
       (set-buffer-modified-p nil))
     (message "Renamed to %s." new-name)))
 
-(provide 'rename-file-and-buffer)
