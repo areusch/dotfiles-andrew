@@ -1,4 +1,3 @@
-
-(require 'html-toc)
+;(require 'html-toc)
 (require 'google-maps)
 (require 'tramp-projects)
