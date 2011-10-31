@@ -24,7 +24,11 @@
 ;;; another project.
 
 ;;; Tramp Projects makes it easy to address files by project name rather than
-;;; path. Typically this is much faster, for me, than deleting off the precise
+;;; path. After installation, you can express paths to your files in the form:
+
+;;; /p:shortname:relative/path/from/project/root.html
+
+;;; Typically this is much faster, for me, than deleting off the precise
 ;;; number of subdirectories from the current path in C-x C-f.
 
 ;;; Right now this is lightly bound (in tramp-project-scan-root) to my own
