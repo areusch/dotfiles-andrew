@@ -18,25 +18,31 @@
          (not (string= "." basename))
          (not (string= ".." basename)))))
 
-(defun traverse-accessible-dirs-recurse (root f blacklist)
+(defun traverse-accessible-dirs-recurse (root f blacklist &optional preorder max-depth)
   ""
-  (dolist (child (directory-files root))
-    (let ((child-absolute (concat root "/" child)))
-      (if (traverse-dir-is-suitable child-absolute blacklist)
-	  (progn
-	    (traverse-accessible-dirs-recurse child-absolute f blacklist))
-	(if (and (or (file-regular-p child-absolute) (file-symlink-p child-absolute))
-		 (not (file-directory-p child-absolute)))
-	    (funcall f child-absolute)))))
-  (funcall f root))
+  (if (and (not (null max-depth)) (eq 0 max-depth))
+      nil
+    (if (and preorder (funcall f root))
+        nil
+      (dolist (child (directory-files root))
+        (let ((child-absolute (concat root "/" child)))
+          (if (traverse-dir-is-suitable child-absolute blacklist)
+              (progn
+                (traverse-accessible-dirs-recurse
+                 child-absolute f blacklist preorder
+                 (if (not (null max-depth)) (- max-depth 1) nil)))
+            (if (and (or (file-regular-p child-absolute) (file-symlink-p child-absolute))
+                     (not (file-directory-p child-absolute)))
+                (funcall f child-absolute)))))
+      (and (not preorder) (funcall f root)))))
 
 ;;;###autoload
-(defun traverse-accessible-dirs (root callback &optional blacklist)
+(defun traverse-accessible-dirs (root callback &optional blacklist preorder max-depth)
   "Traverse accessible, non-blacklisted directories under root. If nil,"
   "blacklist defaults to any directory beginning with a period."
   (if (not (file-accessible-directory-p root))
       nil
     (let ((real-blacklist (if (eq blacklist nil) traverse-blacklist-template blacklist))
 	  (expanded-dir (expand-file-name root)))
-      (traverse-accessible-dirs-recurse expanded-dir callback real-blacklist))))
+      (traverse-accessible-dirs-recurse expanded-dir callback real-blacklist preorder max-depth))))
 
