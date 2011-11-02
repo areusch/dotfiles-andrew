@@ -1,0 +1,3 @@
+[submodule "dotdir/emacs.d/lazy-loaded/third-party/google-maps"]
+	path = dotdir/emacs.d/lazy-loaded/third-party/google-maps
+	url = http://git.naquadah.org/git/google-maps.git
