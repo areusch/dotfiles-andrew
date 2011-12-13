@@ -114,6 +114,17 @@ Major mode for editing JavaScript code.
 
 ;;;***
 
+;;;### (autoloads (kill-buffers-in-dir) "kill-buffers-in-dir" "../../../../.emacs.d/lazy-loaded/kill-buffers-in-dir.el"
+;;;;;;  (20198 55604))
+;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/kill-buffers-in-dir.el
+
+(autoload 'kill-buffers-in-dir "kill-buffers-in-dir" "\
+Kill buffers in specified dir. If dir unspecified, ask the user.
+
+\(fn &optional DIR)" t nil)
+
+;;;***
+
 ;;;### (autoloads (magit-status) "magit" "../lazy-loaded/magit.el"
 ;;;;;;  (20137 5385))
 ;;; Generated autoloads from ../lazy-loaded/magit.el
@@ -228,7 +239,7 @@ Replace the just-yanked text with the text yanked just before it.
 ;;;;;;  "../../../../.emacs.d/lazy-loaded/third-party/google-maps/org-location-google-maps.el"
 ;;;;;;  "../../../../.emacs.d/lazy-loaded/tramp-projects.el" "../../../../.emacs.d/lazy-loaded/traverse-accessible-dirs.el"
 ;;;;;;  "../../../../.emacs.d/lazy-loaded/util.el" "../../../../.emacs.d/lazy-loaded/yank-push.el")
-;;;;;;  (20178 61783 594220))
+;;;;;;  (20198 55606 880423))
 
 ;;;***
 

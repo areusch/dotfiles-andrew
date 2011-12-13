@@ -1,6 +1,7 @@
 ;; Copyright (C) 2010 Andrew Reusch
 
 ;; Kill all buffers in a dir. Useful for closing out projects.
+;;;###autoload
 (defun kill-buffers-in-dir (&optional dir)
   "Kill buffers in specified dir. If dir unspecified, ask the user."
   (interactive)
