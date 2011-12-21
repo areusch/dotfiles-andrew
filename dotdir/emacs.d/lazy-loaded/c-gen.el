@@ -1,5 +1,3 @@
-(require 'areusch-util)
-
 (defun c-file-type (file-name)
       "Returns the parameter if it is a valid path to a c or c++
       source file, else nil"
@@ -17,7 +15,7 @@
   (if (not (equal (buffer-size) 0))
       (error "Buffer not empty")
     (let ((template-filename (convert-standard-filename "~/.emacsconfig/c-impl-template"))
-	  (project-root-path (areusch-project-root-path)))
+	  (project-root-path (project-root-path)))
     (if (not (file-exists-p template-filename))
 	(error (concat "Template file " template-filename " doesn't exist!"))
       (insert-buffer (find-file-noselect template-filename))
@@ -29,7 +27,7 @@
   (if (not (equal (buffer-size) 0))
       (error "Buffer not empty!")
         (let* ((template-filename (convert-standard-filename "~/.emacsconfig/c-decl-template"))
-	      (project-root-path (areusch-project-root-path))
+	      (project-root-path (project-root-path))
 	      (define-prim (concat "_" (upcase (string-find-and-replace (file-relative-name (buffer-file-name)
 										     project-root-path) "[\.\/\-]" "_")))))
 	  (if (not (file-exists-p template-filename))

@@ -10,3 +10,6 @@
 (global-set-key (kbd "C-M-]") 'magit-status)
 
 (provide 'areusch-keyboard-shortcuts)
+
+(require 'cc-mode)
+(define-key c-mode-base-map (kbd "C-c C-/") 'c-switch-decl-impl)

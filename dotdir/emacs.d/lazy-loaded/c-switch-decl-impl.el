@@ -24,6 +24,3 @@
 	(if (c-try-switch-to (file-name-sans-extension (buffer-file-name)) areusch-c-impl-exts)
 	    't
 	  (find-file (concat (file-name-sans-extension (buffer-file-name)) "." (car areusch-c-impl-exts)))))))
-
-(require 'cc-mode)
-(define-key c-mode-base-map (kbd "C-c C-/") 'c-switch-decl-impl)
