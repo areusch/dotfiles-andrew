@@ -128,6 +128,6 @@ scan efficient."
   (dolist (root tramp-project-root-hints)
     (tramp-project-scan-root root)))
 
-(add-hook 'custom-define-hook 'tramp-project-rescan-roots)
+;(add-hook 'custom-define-hook 'tramp-project-rescan-roots)
 
 (provide 'tramp-projects)

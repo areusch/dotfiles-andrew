@@ -484,7 +484,8 @@ functions, and some types.  It also provides indentation that is
   (set (make-local-variable 'comment-end)   "")
 
   ;; Go style
-  (setq indent-tabs-mode t))
+  (setq indent-tabs-mode t)
+  (setq tab-width 2))
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist (cons "\\.go$" #'go-mode))
