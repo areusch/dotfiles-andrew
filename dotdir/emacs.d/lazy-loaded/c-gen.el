@@ -14,7 +14,7 @@
   ""
   (if (not (equal (buffer-size) 0))
       (error "Buffer not empty")
-    (let ((template-filename (convert-standard-filename "~/.emacsconfig/c-impl-template"))
+    (let ((template-filename (convert-standard-filename "~/.emacs.d/template/c-impl-template"))
 	  (project-root-path (project-root-path)))
     (if (not (file-exists-p template-filename))
 	(error (concat "Template file " template-filename " doesn't exist!"))
@@ -26,7 +26,7 @@
   ""
   (if (not (equal (buffer-size) 0))
       (error "Buffer not empty!")
-        (let* ((template-filename (convert-standard-filename "~/.emacsconfig/c-decl-template"))
+        (let* ((template-filename (convert-standard-filename "~/.emacs.d/template/c-decl-template"))
 	      (project-root-path (project-root-path))
 	      (define-prim (concat "_" (upcase (string-find-and-replace (file-relative-name (buffer-file-name)
 										     project-root-path) "[\.\/\-]" "_")))))

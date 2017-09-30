@@ -13,3 +13,6 @@
 
 (require 'cc-mode)
 (define-key c-mode-base-map (kbd "C-c C-/") 'c-switch-decl-impl)
+(global-set-key (kbd "C-c a") 'org-agenda)
+
+(global-set-key (kbd "C-K") 'kite)

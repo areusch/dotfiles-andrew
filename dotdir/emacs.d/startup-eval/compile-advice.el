@@ -17,6 +17,7 @@
       (set (make-local-variable 'compile-command) new-compile-command)
       (if (not (eq nil (assoc 'compile-from-root config)))
           (set 'new-compile-command (concat "cd " project-root " && " new-compile-command)))
+      (message "New root: %s" new-compile-command)
       (ad-set-arg 0 new-compile-command)
       ad-do-it)))
 
