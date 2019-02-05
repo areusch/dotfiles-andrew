@@ -58,6 +58,7 @@ There are two things you can do about this warning:
  '(auth-sources (quote ("~/.emacs-ai" "~/.authinfo.gpg" "~/.netrc")))
  '(indent-tabs-mode nil)
  '(js2-idle-timer-delay 0.8)
+ '(package-selected-packages (quote (magit)))
  '(python-indent 2)
  '(send-mail-function (quote smtpmail-send-it))
  '(smtpmail-smtp-server "smtp.gmail.com")
