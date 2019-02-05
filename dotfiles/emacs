@@ -33,7 +33,7 @@
 (traverse-accessible-dirs
  (concat emacs-extension-dir "/startup-eval")
  (lambda (f)
-   (if (and (string= (file-name-extension f) "el")
+   (if (and (string-suffix-p ".el" f)
 	    (or (file-regular-p f) (file-symlink-p f)))
        (progn
          (load-file f)))))
