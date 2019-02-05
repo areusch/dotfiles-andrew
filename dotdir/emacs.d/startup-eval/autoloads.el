@@ -2,9 +2,8 @@
 ;;
 ;;; Code:
 
-;;;***
 
-;;;### (autoloads (c-gen) "../lazy-loaded/c-gen" "../../../../.emacs.d/lazy-loaded/c-gen.el"
+;;;### (autoloads nil "../lazy-loaded/c-gen" "../../../../.emacs.d/lazy-loaded/c-gen.el"
 ;;;;;;  "7cbea0432495835d3f649daa48fde32f")
 ;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/c-gen.el
 
@@ -12,11 +11,18 @@
 Auto-generate C headers
 
 \(fn)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "../lazy-loaded/c-gen"
+;;;;;;  "../../../../.emacs.d/lazy-loaded/c-gen.el" (0 0 0 0))
+;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/c-gen.el
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "../lazy-loaded/c-gen" '("c-")))
+
+;;;***
 
 ;;;***
 
-;;;### (autoloads (c-switch-decl-impl) "../lazy-loaded/c-switch-decl-impl"
-;;;;;;  "../../../../.emacs.d/lazy-loaded/c-switch-decl-impl.el"
+;;;### (autoloads nil "../lazy-loaded/c-switch-decl-impl" "../../../../.emacs.d/lazy-loaded/c-switch-decl-impl.el"
 ;;;;;;  "b5ff59ce9afcd13b4e45b23d1e9fd44c")
 ;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/c-switch-decl-impl.el
 
@@ -24,11 +30,19 @@ Auto-generate C headers
 In C mode, switch to the buffer's header or implemenation.
 
 \(fn)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "../lazy-loaded/c-switch-decl-impl"
+;;;;;;  "../../../../.emacs.d/lazy-loaded/c-switch-decl-impl.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/c-switch-decl-impl.el
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "../lazy-loaded/c-switch-decl-impl" '("c-try-switch-to" "areusch-c-impl-exts")))
+
+;;;***
 
 ;;;***
 
-;;;### (autoloads (count-words-region) "../lazy-loaded/count-words-region"
-;;;;;;  "../../../../.emacs.d/lazy-loaded/count-words-region.el"
+;;;### (autoloads nil "../lazy-loaded/count-words-region" "../../../../.emacs.d/lazy-loaded/count-words-region.el"
 ;;;;;;  "718597e21acbf2f1b7d446dbc5c87828")
 ;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/count-words-region.el
 
@@ -39,8 +53,16 @@ Print number of words in the region.
 
 ;;;***
 
-;;;### (autoloads (gofmt-before-save gofmt go-mode) "../lazy-loaded/go-mode"
-;;;;;;  "../../../../.emacs.d/lazy-loaded/go-mode.el" "e7358be6b7e6d91bdceb49b636679637")
+;;;### (autoloads "actual autoloads are elsewhere" "../lazy-loaded/dash"
+;;;;;;  "../../../../.emacs.d/lazy-loaded/dash.el" (0 0 0 0))
+;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/dash.el
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "../lazy-loaded/dash" '("dash-" "-keep" "-butlast" "-non" "-only-some" "-zip" "-e" "->" "-a" "-gr" "-when-let" "-d" "-l" "-s" "-p" "-r" "-m" "-i" "-f" "-u" "-value-to-list" "-t" "--" "-c" "!cons" "!cdr")))
+
+;;;***
+
+;;;### (autoloads nil "../lazy-loaded/go-mode" "../../../../.emacs.d/lazy-loaded/go-mode.el"
+;;;;;;  "e7358be6b7e6d91bdceb49b636679637")
 ;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/go-mode.el
 
 (autoload 'go-mode "../lazy-loaded/go-mode" "\
@@ -65,10 +87,18 @@ Add this to .emacs to run gofmt on the current buffer when saving:
  (add-hook 'before-save-hook #'gofmt-before-save)
 
 \(fn)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "../lazy-loaded/go-mode"
+;;;;;;  "../../../../.emacs.d/lazy-loaded/go-mode.el" (0 0 0 0))
+;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/go-mode.el
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "../lazy-loaded/go-mode" '("go-mode-")))
+
+;;;***
 
 ;;;***
 
-;;;### (autoloads (js2-mode) "../lazy-loaded/js2" "../../../../.emacs.d/lazy-loaded/js2.el"
+;;;### (autoloads nil "../lazy-loaded/js2" "../../../../.emacs.d/lazy-loaded/js2.el"
 ;;;;;;  "e20cbcc2740e8da234a50c8e9593de51")
 ;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/js2.el
  (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
@@ -77,11 +107,26 @@ Add this to .emacs to run gofmt on the current buffer when saving:
 Major mode for editing JavaScript code.
 
 \(fn)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "../lazy-loaded/js2"
+;;;;;;  "../../../../.emacs.d/lazy-loaded/js2.el" (0 0 0 0))
+;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/js2.el
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "../lazy-loaded/js2" '("js-" "js2" "char-is-" "with-buffer" "neq" "deflocal")))
+
+;;;***
 
 ;;;***
 
-;;;### (autoloads (kill-buffers-in-dir) "../lazy-loaded/kill-buffers-in-dir"
-;;;;;;  "../../../../.emacs.d/lazy-loaded/kill-buffers-in-dir.el"
+;;;### (autoloads "actual autoloads are elsewhere" "../lazy-loaded/json"
+;;;;;;  "../../../../.emacs.d/lazy-loaded/json.el" (0 0 0 0))
+;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/json.el
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "../lazy-loaded/json" '("json-")))
+
+;;;***
+
+;;;### (autoloads nil "../lazy-loaded/kill-buffers-in-dir" "../../../../.emacs.d/lazy-loaded/kill-buffers-in-dir.el"
 ;;;;;;  "97896bb41b0775124197a9516401a27f")
 ;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/kill-buffers-in-dir.el
 
@@ -92,7 +137,7 @@ Kill buffers in specified dir. If dir unspecified, ask the user.
 
 ;;;***
 
-;;;### (autoloads (kite) "../lazy-loaded/kite" "../../../../.emacs.d/lazy-loaded/kite.el"
+;;;### (autoloads nil "../lazy-loaded/kite" "../../../../.emacs.d/lazy-loaded/kite.el"
 ;;;;;;  "8b2f42d2b88df4a0fc258c1f2631aa86")
 ;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/kite.el
 
@@ -100,22 +145,18 @@ Kill buffers in specified dir. If dir unspecified, ask the user.
 
 
 \(fn)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "../lazy-loaded/kite"
+;;;;;;  "../../../../.emacs.d/lazy-loaded/kite.el" (0 0 0 0))
+;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/kite.el
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "../lazy-loaded/kite" '("kite-" "alist-get-keys")))
+
+;;;***
 
 ;;;***
 
-;;;### (autoloads (magit-status) "../lazy-loaded/magit" "../../../../.emacs.d/lazy-loaded/magit.el"
-;;;;;;  "15f169311aab70f40927ebac3997a2bd")
-;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/magit.el
-
-(autoload 'magit-status "../lazy-loaded/magit" "\
-
-
-\(fn DIR)" t nil)
-
-;;;***
-
-;;;### (autoloads (print-project-definition get-project-definition
-;;;;;;  project-root-path) "../lazy-loaded/projects" "../../../../.emacs.d/lazy-loaded/projects.el"
+;;;### (autoloads nil "../lazy-loaded/projects" "../../../../.emacs.d/lazy-loaded/projects.el"
 ;;;;;;  "e05c679cd8362620889b84368de63471")
 ;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/projects.el
 
@@ -125,7 +166,7 @@ Locate the project root, as identified by files in project-root-files.
 \(fn &optional FILE-NAME)" nil nil)
 
 (autoload 'get-project-definition "../lazy-loaded/projects" "\
-Locate a project definition file, if any, and read it; if none exists, prompts
+Locate a project definition file, if any, and read it; if none exists, prompts 
 
 \(fn F &optional FORCE-RELOAD)" nil nil)
 
@@ -133,11 +174,19 @@ Locate a project definition file, if any, and read it; if none exists, prompts
 
 
 \(fn)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "../lazy-loaded/projects"
+;;;;;;  "../../../../.emacs.d/lazy-loaded/projects.el" (0 0 0 0))
+;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/projects.el
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "../lazy-loaded/projects" '("write-project-definition" "gen-project-definition" "get-project-definition-file" "project-" "display-project-root-path")))
+
+;;;***
 
 ;;;***
 
-;;;### (autoloads (set-executable) "../lazy-loaded/set-executable"
-;;;;;;  "../../../../.emacs.d/lazy-loaded/set-executable.el" "5492c33472788e67149a1013a834184e")
+;;;### (autoloads nil "../lazy-loaded/set-executable" "../../../../.emacs.d/lazy-loaded/set-executable.el"
+;;;;;;  "5492c33472788e67149a1013a834184e")
 ;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/set-executable.el
 
 (autoload 'set-executable "../lazy-loaded/set-executable" "\
@@ -148,45 +197,7 @@ Set the given file (or otherwise the current buffer's backing file)
 
 ;;;***
 
-;;;### (autoloads (google-maps) "../lazy-loaded/third-party/google-maps/google-maps"
-;;;;;;  "../../../../.emacs.d/lazy-loaded/third-party/google-maps/google-maps.el"
-;;;;;;  "e93421b4ea6110eb4641c7ec4ae8524f")
-;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/third-party/google-maps/google-maps.el
-
-(autoload 'google-maps "../lazy-loaded/third-party/google-maps/google-maps" "\
-Run Google Maps on LOCATION.
-If NO-GEOCODING is t, then does not try to geocode the address
-and do not ask the user for a more precise location.
-
-\(fn LOCATION &optional NO-GEOCODING)" t nil)
-
-;;;***
-
-;;;### (autoloads (google-maps-geocode-replace-region) "../lazy-loaded/third-party/google-maps/google-maps-geocode"
-;;;;;;  "../../../../.emacs.d/lazy-loaded/third-party/google-maps/google-maps-geocode.el"
-;;;;;;  "9343a9b12c15aa227c1f491d8c9783af")
-;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/third-party/google-maps/google-maps-geocode.el
-
-(autoload 'google-maps-geocode-replace-region "../lazy-loaded/third-party/google-maps/google-maps-geocode" "\
-Geocode region and replace it with a more accurate result.
-
-\(fn BEG END)" t nil)
-
-;;;***
-
-;;;### (autoloads (google-maps-static-mode) "../lazy-loaded/third-party/google-maps/google-maps-static"
-;;;;;;  "../../../../.emacs.d/lazy-loaded/third-party/google-maps/google-maps-static.el"
-;;;;;;  "f3d1ec0a08830f2704d2824f9649210b")
-;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/third-party/google-maps/google-maps-static.el
-
-(autoload 'google-maps-static-mode "../lazy-loaded/third-party/google-maps/google-maps-static" "\
-A major mode for Google Maps service
-
-\(fn)" t nil)
-
-;;;***
-
-;;;### (autoloads (rename-file-and-buffer) "../lazy-loaded/third-party/rename-file-and-buffer"
+;;;### (autoloads nil "../lazy-loaded/third-party/rename-file-and-buffer"
 ;;;;;;  "../../../../.emacs.d/lazy-loaded/third-party/rename-file-and-buffer.el"
 ;;;;;;  "7e42ae9a883de602cfdc4386a580b576")
 ;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/third-party/rename-file-and-buffer.el
@@ -198,8 +209,16 @@ Renames both current buffer and file it's visiting to NEW-NAME.
 
 ;;;***
 
-;;;### (autoloads (traverse-accessible-dirs string-matches-regex-list)
-;;;;;;  "../lazy-loaded/traverse-accessible-dirs" "../../../../.emacs.d/lazy-loaded/traverse-accessible-dirs.el"
+;;;### (autoloads "actual autoloads are elsewhere" "../lazy-loaded/tramp-projects"
+;;;;;;  "../../../../.emacs.d/lazy-loaded/tramp-projects.el" (0 0
+;;;;;;  0 0))
+;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/tramp-projects.el
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "../lazy-loaded/tramp-projects" '("tramp-project-")))
+
+;;;***
+
+;;;### (autoloads nil "../lazy-loaded/traverse-accessible-dirs" "../../../../.emacs.d/lazy-loaded/traverse-accessible-dirs.el"
 ;;;;;;  "647b99745c40323901fd885a311b5e7f")
 ;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/traverse-accessible-dirs.el
 
@@ -212,11 +231,19 @@ Returns t if str matches one of the regexes in list.
 Traverse accessible, non-blacklisted directories under root. If nil,
 
 \(fn ROOT CALLBACK &optional BLACKLIST PREORDER MAX-DEPTH)" nil nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "../lazy-loaded/traverse-accessible-dirs"
+;;;;;;  "../../../../.emacs.d/lazy-loaded/traverse-accessible-dirs.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/traverse-accessible-dirs.el
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "../lazy-loaded/traverse-accessible-dirs" '("traverse-")))
+
+;;;***
 
 ;;;***
 
-;;;### (autoloads (areusch-assoc-delete string-find-and-replace string-begins-with
-;;;;;;  list-contains-string) "../lazy-loaded/util" "../../../../.emacs.d/lazy-loaded/util.el"
+;;;### (autoloads nil "../lazy-loaded/util" "../../../../.emacs.d/lazy-loaded/util.el"
 ;;;;;;  "083c30051607e4d1c2fd8fd5e0070ddc")
 ;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/util.el
 
@@ -240,10 +267,18 @@ Delete all elements from alist whose car is `equal` to key. Returns the
    modified alist.
 
 \(fn ALIST KEY)" nil nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "../lazy-loaded/util"
+;;;;;;  "../../../../.emacs.d/lazy-loaded/util.el" (0 0 0 0))
+;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/util.el
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "../lazy-loaded/util" '("string-find-and-replace-recurse")))
+
+;;;***
 
 ;;;***
 
-;;;### (autoloads (yank-push) "../lazy-loaded/yank-push" "../../../../.emacs.d/lazy-loaded/yank-push.el"
+;;;### (autoloads nil "../lazy-loaded/yank-push" "../../../../.emacs.d/lazy-loaded/yank-push.el"
 ;;;;;;  "f96790804e551bfe7f03b676e6ece3f6")
 ;;; Generated autoloads from ../../../../.emacs.d/lazy-loaded/yank-push.el
 
@@ -257,19 +292,14 @@ Replace the just-yanked text with the text yanked just before it.
 ;;;### (autoloads nil nil ("../../../../.emacs.d/lazy-loaded/c-gen.el"
 ;;;;;;  "../../../../.emacs.d/lazy-loaded/c-switch-decl-impl.el"
 ;;;;;;  "../../../../.emacs.d/lazy-loaded/count-words-region.el"
-;;;;;;  "../../../../.emacs.d/lazy-loaded/go-mode.el" "../../../../.emacs.d/lazy-loaded/js2.el"
-;;;;;;  "../../../../.emacs.d/lazy-loaded/json.el" "../../../../.emacs.d/lazy-loaded/kill-buffers-in-dir.el"
-;;;;;;  "../../../../.emacs.d/lazy-loaded/kite.el" "../../../../.emacs.d/lazy-loaded/magit.el"
-;;;;;;  "../../../../.emacs.d/lazy-loaded/projects.el" "../../../../.emacs.d/lazy-loaded/set-executable.el"
-;;;;;;  "../../../../.emacs.d/lazy-loaded/third-party/google-maps/google-maps-base.el"
-;;;;;;  "../../../../.emacs.d/lazy-loaded/third-party/google-maps/google-maps-geocode.el"
-;;;;;;  "../../../../.emacs.d/lazy-loaded/third-party/google-maps/google-maps-static.el"
-;;;;;;  "../../../../.emacs.d/lazy-loaded/third-party/google-maps/google-maps.el"
-;;;;;;  "../../../../.emacs.d/lazy-loaded/third-party/google-maps/org-location-google-maps.el"
-;;;;;;  "../../../../.emacs.d/lazy-loaded/third-party/rename-file-and-buffer.el"
+;;;;;;  "../../../../.emacs.d/lazy-loaded/dash.el" "../../../../.emacs.d/lazy-loaded/go-mode.el"
+;;;;;;  "../../../../.emacs.d/lazy-loaded/js2.el" "../../../../.emacs.d/lazy-loaded/json.el"
+;;;;;;  "../../../../.emacs.d/lazy-loaded/kill-buffers-in-dir.el"
+;;;;;;  "../../../../.emacs.d/lazy-loaded/kite.el" "../../../../.emacs.d/lazy-loaded/projects.el"
+;;;;;;  "../../../../.emacs.d/lazy-loaded/set-executable.el" "../../../../.emacs.d/lazy-loaded/third-party/rename-file-and-buffer.el"
 ;;;;;;  "../../../../.emacs.d/lazy-loaded/tramp-projects.el" "../../../../.emacs.d/lazy-loaded/traverse-accessible-dirs.el"
 ;;;;;;  "../../../../.emacs.d/lazy-loaded/util.el" "../../../../.emacs.d/lazy-loaded/yank-push.el")
-;;;;;;  (22992 3247 888840))
+;;;;;;  (0 0 0 0))
 
 ;;;***
 
