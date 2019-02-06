@@ -9,7 +9,7 @@ if [ -d "$HOME/.managed/dotdir" ]; then
         else
             trample=
         fi
-        if [ -e "$HOME/$x" -a "x$trample" != "x" ]; then
+        if [ -e "$HOME/.$x" -a "x$trample" != "x" ]; then
             rm -f "$HOME/.$x"
         fi
         if [ ! -e "$HOME/.$x" ]; then
@@ -25,10 +25,10 @@ if [ -d "$HOME/.managed/dotfiles" ]; then
         else
             trample=
         fi
-        if [ -e "$HOME/$x" -a "x$trample" != "x" ]; then
+        if [ -e "$HOME/.$x" -a "x$trample" != "x" ]; then
             rm -f "$HOME/.$x"
         fi
-        if [ ! -e "$HOME/$x" ]; then
+        if [ ! -e "$HOME/.$x" ]; then
             ln -s "$HOME/.managed/dotfiles/$x" "$HOME/.$x" 2>/dev/null
         fi
     done
@@ -44,7 +44,7 @@ if [ -d "$HOME/.managed/nolink" ]; then
         if [ -e "$HOME/.$x" -a "x$trample" != "x" ]; then
             rm -rf "$HOME/.$x"
         fi
-        if [ ! -e "$HOME/$.x" ]; then
+        if [ ! -e "$HOME/.$x" ]; then
             ln "$HOME/.managed/nolink/$x" "$HOME/.$x"
         fi
     done
