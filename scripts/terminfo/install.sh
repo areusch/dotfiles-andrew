@@ -1,9 +1,5 @@
-#!/bin/bash -e
+set install_dir=$(dirname ${BASH_SOURCE[0]})
 
-cd $(dirname $0)
-install_dir=$(pwd)
-
-for t in `ls $(install_dir)/terms`; do
-    tic -x "$t"
+for t in `ls ${install_dir}/terms`; do
+    tic -x "${install_dir}/terms/$t"
 done
-
