@@ -51,7 +51,7 @@ if [ -d "$HOME/.managed/nolink" ]; then
 fi
 
 if [ -d "$HOME/.managed/scripts" ]; then
-    for x in `find $HOME/.managed/scripts -type f -perm +x`; do
+    for x in `find $HOME/.managed/scripts -type f -perm /u+x`; do
         "$x"
     done
 fi
