@@ -51,7 +51,11 @@ if [ -d "$HOME/.managed/nolink" ]; then
 fi
 
 if [ -d "$HOME/.managed/scripts" ]; then
-    for x in `find $HOME/.managed/scripts -type f -perm /u+x`; do
+    find_mode=/
+    if [ `uname` == "Darwin" ]; then
+       find_mode=+
+    fi
+    for x in `find $HOME/.managed/scripts -type f -perm ${find_mode}u+x`; do
         "$x"
     done
 fi
