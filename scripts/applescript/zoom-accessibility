@@ -1,0 +1,78 @@
+(*
+ * toggle-macos-accessibility-keyboard
+ * applescript
+ *
+ * description:
+ * macOS automation script to toggle the macOS Accessibility Keyboard.
+ * Shows and hides the keyboard depending on its current state.
+ *
+ * author: sidneys
+ * homepage: http://sidneys.github.io
+ * version: 2.0.1
+ * license: MIT
+ *)
+
+-- Init
+use AppleScript version "2.7"
+use scripting additions
+
+-- Persist start-up state of the "System Preferences" app
+set didRunSystemPreferences to (get running of application "System Preferences")
+
+tell application "System Preferences"
+  --get a reference to the Security & Privacy preferences pane
+  set securityPane to pane id "com.apple.preference.security"
+
+  --tell that pane to navigate to its "Accessibility" section under its Privacy tab
+  --(the anchor name is arbitrary and does not imply a meaningful hierarchy.)
+  tell securityPane to reveal anchor "Privacy_Accessibility"
+
+  --open the preferences window and make it frontmost
+  activate
+end tell
+
+display dialog "Please add iTerm to the enabled applications, then click Continue." buttons {"Continue"} default button "Continue"
+
+-- Show "Keyboard" pane within the Accessibility preferences
+tell application "System Preferences"
+  activate
+  reveal anchor "Seeing_Zoom" of pane id "com.apple.preference.universalaccess"
+end tell
+
+tell application "System Events"
+  -- Wait for: System Preferences Window
+  repeat until window 1 of process "System Preferences" exists
+  end repeat
+
+  tell process "System Preferences"
+    repeat until checkbox "Use scroll gesture with modifier keys to zoom:" in group 1 of window "Accessibility" exists
+    end repeat
+    tell group 1 of window "Accessibility"
+      set isEnabled to the value of checkbox "Use scroll gesture with modifier keys to zoom:"
+
+      if isEnabled is 0 then
+        click checkbox "Use scroll gesture with modifier keys to zoom:"
+        log "enabled zoom!"
+      end if
+
+      if (get the value of combo box "Use scroll gesture with modifier keys to zoom:") is not "⌃⇧⌘" then
+        select combo box "Use scroll gesture with modifier keys to zoom:"
+        -- log (get every UI element of combo box "Use scroll gesture with modifier keys to zoom:")
+        click button 1 of combo box "Use scroll gesture with modifier keys to zoom:"
+        delay 0.2
+        -- log (get the value of every UI element of list 1 of scroll area 1 of combo box "Use scroll gesture with modifier keys to zoom:")
+        select UI element 2 of list 1 of scroll area 1 of combo box "Use scroll gesture with modifier keys to zoom:"
+        key code 36
+        -- log (get the {class, name} of every UI element)
+        -- set the value of combo box "Use scroll gesture with modifier keys to zoom:" to "⌃"
+        -- select combo box "Use scroll gesture with modifier keys to zoom:"
+        -- keystroke "⌃⇧⌘" using {command down, control down, shift down}
+        -- log "changed zoom key"
+      end if
+    end tell
+  end tell
+end tell
+
+if application "System Preferences" is running then
+  tell application "System Preferences" to quit
+end if
