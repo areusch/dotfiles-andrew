@@ -13,22 +13,10 @@ if [ -z "$(which brew)" ]; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-brew cask install \
-     docker \
-     emacs \
-     iterm2 \
-
-brew install \
-    bash-completion \
-    mas \
-    python
+(cd $(dirname $0) && brew bundle)
 
 pip3 install \
      pipenv
-
-# Install apps
-# mas install \
-#     926036361  # LastPass
 
 # Setup menu icons
 

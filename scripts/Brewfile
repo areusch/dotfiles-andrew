@@ -1,0 +1,10 @@
+cask "docker"
+cask "emacs"
+cask "iterm2"
+cask "osxfuse"
+cask "spotify"
+
+brew "bash-completion"
+brew "go"
+brew "mas"
+brew "python"
