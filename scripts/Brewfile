@@ -8,3 +8,5 @@ brew "bash-completion"
 brew "go"
 brew "mas"
 brew "python"
+
+brew "git-lfs"
