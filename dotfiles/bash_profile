@@ -1,1 +1,16 @@
+
+# copies function named $1 to name $2
+function copy_function() {
+    declare -F $1 > /dev/null || return 1
+    eval "$(echo "${2}()"; declare -f ${1} | tail -n +2)"
+}
+
 source ~/.bashrc
+copy_function bashrc real_bashrc
+
+function bashrc() {
+    real_bashrc
+    for x in `ls -1 ~/.bashrc.d/*.sh`; do
+	source "$x"
+    done
+}
