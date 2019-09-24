@@ -10,3 +10,8 @@ brew "mas"
 brew "python"
 
 brew "git-lfs"
+
+# For emacs image-dired thumbnails.
+brew "imagemagick"
+
+brew "ffmpeg"
