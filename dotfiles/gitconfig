@@ -1,4 +1,5 @@
-
+[core]
+        excludesfile = ~/.gitignore
 [user]
 	name = Andrew Reusch
 	email = areusch@gmail.com
