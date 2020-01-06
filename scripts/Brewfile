@@ -1,8 +1,11 @@
 cask "docker"
 cask "emacs"
+cask "google-cloud-sdk"
 cask "iterm2"
 cask "osxfuse"
 cask "spotify"
+cask "virtualbox"
+cask "vlc"
 
 brew "bash-completion"
 brew "go"
