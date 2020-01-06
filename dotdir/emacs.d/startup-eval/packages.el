@@ -3,3 +3,11 @@
 
 (use-package magit
   :ensure t)
+
+(use-package lsp-mode
+  :hook (go-mode . lsp)
+  :commands lsp)
+
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode))
