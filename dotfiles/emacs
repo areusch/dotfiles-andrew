@@ -62,6 +62,7 @@ There are two things you can do about this warning:
    (quote
     (company-lsp flycheck lsp-ui gnu-elpa-keyring-update lsp-mode go-mode transient dash with-editor exec-path-from-shell org-gcal s auctex auctex-latexmk timesheet magit)))
  '(python-indent 2)
+ '(python-indent-offset 2)
  '(send-mail-function (quote smtpmail-send-it))
  '(smtpmail-smtp-server "smtp.gmail.com")
  '(smtpmail-smtp-service 587)
