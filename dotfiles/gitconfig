@@ -8,3 +8,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[alias]
+        grep-replace = "!f() { git grep -l $1 | xargs -n 1 sed -i '' \"s|$1|$2|g\"; }; f"
