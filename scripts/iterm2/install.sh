@@ -2,6 +2,10 @@
 
 set -xe
 
+if [ "$(uname -r)" != "Darwin" ]; then
+    exit
+fi
+
 PROFILE_DIR="$HOME/Library/Application Support/iTerm2/DynamicProfiles"
 
 mkdir -p "${PROFILE_DIR}"
