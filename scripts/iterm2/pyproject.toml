@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "set-iterm2"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.7"
+iterm2 = "^1.30"
+pyobjc = "^8.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
