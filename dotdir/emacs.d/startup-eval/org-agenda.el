@@ -24,4 +24,4 @@ If FILEXT is provided, return files with extension FILEXT instead."
           (add-to-list 'org-file-list org-file)))))))
 
 (add-to-list 'org-agenda-files "~/ws/")
-(setq org-agenda-files (append org-agenda-files (sa-find-org-file-recursively "~/ws/adafruit")))
+(setq org-agenda-files (append org-agenda-files (sa-find-org-file-recursively "~/ws/org")))
