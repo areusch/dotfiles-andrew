@@ -18,3 +18,4 @@ brew "git-lfs"
 brew "imagemagick"
 
 brew "ffmpeg"
+brew "coreutils"
