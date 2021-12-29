@@ -51,3 +51,6 @@ flycheck_*.el
 
 # OS X images
 .DS_Store
+
+# ccache
+.cache
