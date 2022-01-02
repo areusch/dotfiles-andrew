@@ -55,7 +55,7 @@ if [ -d "$HOME/.managed/scripts" ]; then
     if [ `uname` == "Darwin" ]; then
        find_mode=+
     fi
-    for x in `find $HOME/.managed/scripts -type f -perm ${find_mode}u+x`; do
+    for x in `find $HOME/.managed/scripts -maxdepth 1 -type f -perm ${find_mode}u+x`; do
         "$x"
     done
 fi
