@@ -18,4 +18,4 @@
 (global-set-key (kbd "C-M-K") 'kite)
 
 (require 'magit)
-(define-key magit-file-mode-map (kbd "C-c g") 'magit-file-dispatch)
+(global-set-key (kbd "C-c g") 'magit-file-dispatch)
