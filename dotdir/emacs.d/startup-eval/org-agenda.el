@@ -23,5 +23,7 @@ If FILEXT is provided, return files with extension FILEXT instead."
                           org-file-list) ; add files found to result
           (add-to-list 'org-file-list org-file)))))))
 
+(if (not (file-accessible-directory-p "~/ws/org"))
+    (make-directory "~/ws/org" 't))
 (add-to-list 'org-agenda-files "~/ws/")
 (setq org-agenda-files (append org-agenda-files (sa-find-org-file-recursively "~/ws/org")))

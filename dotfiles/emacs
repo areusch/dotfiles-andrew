@@ -17,7 +17,7 @@
  '(js2-idle-timer-delay 0.8)
  '(package-selected-packages
    (quote
-    (projectile solarized-theme company-lsp flycheck lsp-ui gnu-elpa-keyring-update lsp-mode go-mode transient dash with-editor exec-path-from-shell org-gcal s auctex auctex-latexmk timesheet magit)))
+    (projectile solarized-theme flycheck lsp-ui gnu-elpa-keyring-update lsp-mode go-mode transient dash with-editor exec-path-from-shell org-gcal s auctex auctex-latexmk timesheet magit)))
  '(python-indent 2)
  '(python-indent-offset 2)
  '(send-mail-function (quote smtpmail-send-it))
@@ -54,7 +54,20 @@ There are two things you can do about this warning:
   ;; For important compatibility libraries like cl-lib
   (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/"))))
 (package-initialize)
-(package-install-selected-packages)
+(let* ((not-installed (seq-remove #'package-installed-p package-selected-packages))
+       (available (seq-filter (lambda (p) (assq p package-archive-contents)) not-installed))
+       (difference (- (length not-installed) (length available))))
+  (progn
+    (message "Not installed: %s" not-installed)
+    (message "Available: %s" available)
+    (message "Difference: %s" difference)
+    (if (> difference 0)
+        (package-refresh-contents)
+      (mapc (lambda (pkg)
+              (progn
+                (message "Install %s" pkg)
+                (package-install pkg))) not-installed))))
+;; (package-install-selected-packages)
 
 ;; 2) Load traverse-accessible-dirs for load-path setup.
 ;; Specially loaded so we can traverse the lazy-load tree.
